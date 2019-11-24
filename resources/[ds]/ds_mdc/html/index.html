@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="computer">
+      <div id="screen">
+        <p id="error"></p>
+        <div id="header">
+          <img src="" alt="logo" draggable="false"/>
+          <p></p>
+        </div>
+        <div id="content">
+          <div id="login">
+            <form type="login" class="nospace">
+              <input placeholder="Password" type="password"/>
+            </form>
+          </div>
+          <div id="start">
+            <ul class="block">
+              <li class="header">
+              	<h1>Plate</h1>
+              	<form type="car">
+              	  <input placeholder="ABC123"/>
+              	</form>
+              	<a href="#!" class="search"><i class="material-icons">directions_car</i></a>
+              </li>
+              <div id="car-content">
+
+              </div>
+            </ul>
+            <ul class="block">
+              <li class="header">
+              	<h1>Date of birth</h1>
+              	<form type="person">
+              	  <input placeholder="yymmdd-xxxx"/>
+              	</form>
+              	<a href="#!" class="search"><i class="material-icons">person</i></a>
+              </li>
+              <div id="person-content">
+
+              </div>
+            </ul>
+            <div class="block block-buttons">
+              <a href="#!" class="waves-effect btn-flat" page="efterlys">WANTED</a>
+              <a href="#!" class="waves-effect btn-flat" page="regelverk">REGULATIONS</a>
+              <a href="#!" class="waves-effect btn-flat" page="dna">DNA</a>
+              <a href="#!" class="waves-effect btn-flat" page="incidenter">INCIDENTS</a>
+              <a href="#!" class="waves-effect btn-flat" class="admin" page="admin">LOGS</a>
+            </div>
+          </div>
+          <div id="admin" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>LOGS</h1>
+            <hr />
+            <table>
+              <thead>
+                <tr>
+                  <td>Type</td>
+                  <td>Removed by</td>
+                  <td>ID</td>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+          <div id="car" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>CAR INFORMATION</h1>
+            <hr />
+            <form type="new-car">
+              <input id="new-car" placeholder="Note"/>
+            </form>
+            <a href="#!" class="button" id="add-car-info">ADD</a>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Owner:</td>
+                  <td><a href="#!" id="car-owner" class="user" type="car">Loading..</a></td>
+                </tr>
+                <tr>
+                  <td>Inspected:</td>
+                  <td id="car-inspected">Loading..</td>
+                </tr>
+                <tr>
+                  <td>Notes:</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul id="car-comments">
+
+            </ul>
+          </div>
+          <div id="person" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>PERSONAL INFORMATION</h1>
+            <hr />
+            <img src="assets/images/user.png" alt="IMG" draggable="false"/>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Name:</td>
+                  <td id="person-name">Loading..</td>
+                </tr>
+                <tr>
+                  <td>Date of birth:</td>
+                  <td id="person-personnummer">Loading..</td>
+                </tr>
+                <tr>
+                  <td>Sex:</td>
+                  <td id="person-sex">Loading..</td>
+                </tr>
+                <tr>
+                  <td>Height:</td>
+                  <td id="person-height">Loading..</td>
+                </tr>
+                <tr>
+                  <td>Phone number:</td>
+                  <td id="person-phone">Loading..</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul id="person-brottsregister">
+              <h4>Criminal record:</h4>
+            </ul>
+            <ul id="person-incident">
+              <h4>Wanted: <b></b><a href="#!" class="remove" dob="" type="efterlysning" title="Ta bort"><i class="material-icons">remove_circle_outline</i></a></h4>
+              <li><a href="#!" class="inc-link"></a></li>
+            </ul>
+          </div>
+          <div id="efterlys" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>WANTED</h1>
+            <hr />
+            <form id="efterlys-form">
+              <div class="input-block">
+                <h1>Firstname</h1>
+                <input placeholder="Jonas" id="efterlys-firstname" required/>
+              </div>
+              <div class="input-block">
+                <h1>Lastname</h1>
+                <input placeholder="Svensson" id="efterlys-lastname" required/>
+              </div>
+              <div class="input-block">
+                <h1>Date of birth</h1>
+                <input placeholder="yymmdd-xxxx" id="efterlys-personnummer" required/>
+              </div>
+              <div class="input-block">
+                <h1>Crime</h1>
+                <input placeholder="Murder.." id="efterlys-crime" required/>
+              </div>
+              <div class="input-block">
+                <h1>Incident</h1>
+                <input placeholder="Incident number" id="efterlys-incident" required/>
+              </div>
+              <button id="efterlys-submit" class="waves-effect btn-flat">ADD</button>
+            </form>
+            <hr />
+            <ul>
+              <p class="title">Wanted:</p>
+              <div id="efterlys-content">
+
+              </div>
+            </ul>
+          </div>
+          <div id="regelverk" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>REGULATIONS</h1>
+            <hr />
+            <ul>
+
+            </ul>
+          </div>
+          <div id="incidenter" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>INCIDENTS</h1>
+            <hr />
+            <form class="nospace" type="incident">
+              <input placeholder="Incident number"/>
+            </form>
+            <a href="#!" class="button waves-effect" id="incident-search">OPEN</a>
+            <div id="incident-a">
+              <form>
+                <textarea id="incident-text" required></textarea>
+              </form>
+              <a href="#!" class="button button-large waves-effect" id="incident-add">ADD</a>
+              <ul>
+
+              </ul>
+            </div>
+            <div id="incident">
+              <h4 class="title"></h4>
+              <a href="#!" class="remove no" title="Ta bort" type="incident" inc-numb=""><i class="material-icons">remove_circle_outline</i></a>
+              <p></p>
+            </div>
+          </div>
+          <div id="dna" class="info">
+            <a href="#!" class="close"><i class="material-icons">close</i></a>
+            <h1>DNA - Uploading..</h1>
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/materialize.js" type="text/javascript"></script>
+    <script src="assets/js/regelverk.js" type="text/javascript"></script>
+    <script src="assets/js/passwords.js" type="text/javascript"></script>
+    <script src="assets/js/init.js" type="text/javascript"></script>
+  </body>
+</html>

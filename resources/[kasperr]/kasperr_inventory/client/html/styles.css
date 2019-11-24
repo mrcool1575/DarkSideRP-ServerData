@@ -1,0 +1,228 @@
+/*
+  __  __           _            _                 _  __                         _____  
+ |  \/  |         | |          | |               | |/ /                        |  __ \ 
+ | \  / | __ _  __| | ___      | |__  _   _      | ' / __ _ ___ _ __   ___ _ __| |__) |
+ | |\/| |/ _` |/ _` |/ _ \     | '_ \| | | |     |  < / _` / __| '_ \ / _ \ '__|  _  / 
+ | |  | | (_| | (_| |  __/     | |_) | |_| |     | . \ (_| \__ \ |_) |  __/ |  | | \ \ 
+ |_|  |_|\__,_|\__,_|\___|     |_.__/ \__, |     |_|\_\__,_|___/ .__/ \___|_|  |_|  \_\
+                                       __/ |                   | |                     
+                                      |___/                    |_|                     
+
+  Author: Kasper Rasmussen
+  Steam: https://steamcommunity.com/id/kasperrasmussen
+*/
+
+:root { 
+  --primary-color: #2980b9; 
+  --secondary-color: #1d699c; 
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  overflow: hidden;
+  font-family: monospace;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  color: var(--primary-color);
+  box-shadow: 0 10px 0 0 var(--primary-color) inset;
+  background-color: #fefffa;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  /* display: none; */
+  padding: 56px 20px;
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.btnClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.btnClose:hover {
+  color: var(--secondary-color);
+}
+
+#home {
+  display: none;
+  margin-top: 30px;
+}
+
+#home h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+#home h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+#home img {
+  margin-top: 20px;
+  border: 5px solid #161616;
+}
+
+#items {
+  width: 600px;
+  margin-left: 200px;
+  overflow-y: scroll;
+  height: 480px;
+}
+
+#items div {
+  width: 110px;
+  height: 110px;
+  margin: 10px;
+  background-color: #ececec;
+  position: relative;
+  -webkit-box-shadow: 0 0 7px #292929;
+  box-shadow: 0 0 10px #292929;
+  transition: transform .2s;
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#items div:hover {
+  transform: scale(1.06);
+  background-color: #d1d1d1;
+}
+
+#items div p {
+  color: #161616;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+#items div .amount {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#items div .name {
+  position: absolute;
+  bottom: 0px;
+  width: 110px;
+  text-align: center;
+}
+
+#functions {
+  width: 150px;
+  /* height: 280px; */
+  height: 340px;
+  position: absolute;
+  right: 20px;
+  top: 220px;
+}
+
+#functions button {
+  height: 70px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #ececec;
+  font-size: 16px;
+  transition: transform .2s;
+  text-transform: uppercase;
+}
+
+#functions input {
+  height: 70px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #d1d1d1;
+  font-size: 16px;
+  transition: transform .2s;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#functions input:hover {
+  transform: scale(1.06);
+}
+
+#functions .function {
+  background-color: #ececec;
+}
+
+#functions .function:hover {
+  background-color: #d1d1d1;
+  transform: scale(1.06);
+}
+
+#functions .weight {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+}
+
+.selectedItem {
+  background-color: rgb(0, 109, 0);
+}
